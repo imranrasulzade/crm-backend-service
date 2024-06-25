@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: employee_system
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:5433/employee_system
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: true
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+    enabled: false
+
+server:
+  port: 8083
+ApiVersion: 1
